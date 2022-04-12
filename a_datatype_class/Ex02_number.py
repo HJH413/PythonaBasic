@@ -82,3 +82,11 @@ print(' 실수 : {0:.2f}'.format(y))
 print(' 실수 : {0}, 정수 {1} '.format(y, 8.4//5.3))
 print(' 실수 : {}, 정수 {} '.format(y, 8.4//5.3))
 print(' 실수 : {1}, 정수 {0} '.format(y, 8.4//5.3))
+
+
+print("--"*25)
+a = 3.5
+b = int(3.5)
+print(a**((a // b) * 2)) # 12.25  3.5**((3.5//3)*2)
+print((a - b)*a)
+print((((a - b) * a) // b))

@@ -39,6 +39,7 @@ if([]):
 else:
     print('False2')
 """
+print('@'*50)
 if('아'):
     print('True')   # True
 else:
