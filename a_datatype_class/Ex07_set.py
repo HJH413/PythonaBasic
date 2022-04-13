@@ -2,10 +2,21 @@
 #  집합
 #       - 집합에 관련된 자료형
 #       - 순서를 지정하지 않는다
-#       - 중복을 허용하지 않는다
+#       - 중복을 허용하지 않는다 ex: 로또번호 만들때
 #       - { }
 
 s = set()               # 빈 집합을 생성
+# s = {}                # 빈 dictionary 임(**********)
 s = set([1,2,3,1,1])
-print(s)
+print(s) # s={1,2,3}
+#print(s[0])
 
+b = {3,4,5,6}
+
+print(s.intersection(b)) #교집합 #3
+print(s.union(b)) # 합집합 # 123456
+print(s | b) # 123456
+print(s & b) # 3
+
+print(s - b) #차집합 # 1 2
+print(b - s) #차집합 # 4 5 6
