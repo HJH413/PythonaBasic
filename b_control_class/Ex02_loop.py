@@ -77,7 +77,7 @@ print(num) # 답은 5
 
 #4
 result = 0
-for i in range(5, -5, -2): # [5, 3, 1,-1, -3]
+for i in range(5, -5, -2): # [5, 3, 1, -1, -3]
     if i < -3:
         result += 1
     else:
@@ -102,7 +102,7 @@ coffee = 3500
 while money > coffee: # 20000 > 3500
     if coupon < 4: # 0 1 2 3
         money = money - coffee # 16500 13000 9500 6000 8800 5300 1800
-        coupon += 1 # 1
+        coupon += 1 #               1   2    3    4    0     1    2
     else:
         money += 2800 # 8800 쿠폰 0
         coupon = 0

@@ -101,12 +101,12 @@ def func(a, b, c=0, *args, **kwargs):  # 받는 변수 위치 인자 뭐시기..
     return sum
 
 
-print(func(4, 5))
-print(func(4, 5, 6))
-print(func(4, 5, 6, 7))
-print(func(4, 5, 6, 7, 8, 9))
-print(func(4, 5, 6, 7, kor=80, eng=70))
-print(func(4, 5, 6, 7, kor=80, eng=70, java=60))
+print(func(4, 5)) # 9
+print(func(4, 5, 6)) # 15
+print(func(4, 5, 6, 7)) # 22
+print(func(4, 5, 6, 7, 8, 9)) #39
+print(func(4, 5, 6, 7, kor=80, eng=70)) #172
+print(func(4, 5, 6, 7, kor=80, eng=70, java=60)) #232
 
 
 # [ 4. 함수 ]
@@ -125,7 +125,8 @@ print("After:", x)  # After : 20 #  정답 After : 10 x의 10의 값을
 
 # 2. 다음 코드의 실행 결과를 쓰시오.
 def sotring_function(list_value):
-    return list_value.sort()  # sort함수는 return 값이 없어서
+    list_value.sort() # sort함수는 return 값이 없어서 
+    return list_value # return 에 값을 지정해줘야함
 
 
 print(sotring_function([5, 4, 3, 2, 1]))  # 1 2 3 4 5
@@ -136,6 +137,7 @@ def is_yes(your_answer):
     if your_answer.upper() == "YES" or your_answer.upper() == "Y":
         result = your_answer.lower()
 
+        #return result # 리턴 값이 없으므로 None 이나옴 그래서 값을 정상적으로 받을려면 return result
 
 print(is_yes("Yes"))
 
@@ -148,8 +150,7 @@ print(is_yes("Yes"))
 
 # 4. 다음과 같이 코드를 작성했을 때, 실행 결과로 알맞은 것은?
 def add_and_mul(a, b, c):
-    return b + a * c + b
-
+    return b + a * c + b # 4 + (3*5) + 4  =  23
 
 print(add_and_mul(3, 4, 5) == 63)
 
@@ -159,12 +160,11 @@ print(add_and_mul(3, 4, 5) == 63)
 
 # 5. 다음과 같이 코드를 작성했을 때, 실행 결과로 알맞은 것은?
 def args_test_3(one, two, *args, three):
-    print(one + two + sum(args))
-    print(args)
-
+    print(one + two + sum(args))  # 정상적이라면 3+4+5+6+7 = 25
+    print(args) # 정상적이라면 5 6 7
 
 args_test_3(3, 4, 5, 6, 7)
-# 1
+# 1 정답 3번  args_test_3 뒤에 three 를 받아올 값이 없어서 에러
 
 
 # ➀ 25 (5, 6, 7) ➁ 20 (6, 7)➂ TypeError➃ 25 (6, 7) ➄ 20 (5, 6, 7)

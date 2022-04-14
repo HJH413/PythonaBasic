@@ -83,17 +83,6 @@ print(bset)
 # ( ) 를 사용하면 튜플이라 생각하지만 튜플은 컨프리핸션이 없다.
 
 
-
-
-
-
-
-
-
-
-
-
-
 우리의결의= """취하고싶으면달려라
              맡은업무는반드시마치자
              노력없는성과는없다
@@ -112,13 +101,13 @@ print(result)
 #2
 #           0   1   2   3    4     5  6  7   8
 cat_song = "my cat has blue eyes, my cat is cute"
-print({i:j for j,i in enumerate(cat_song.split())}) # 잘 모르겠담
+print({i:j for j,i in enumerate(cat_song.split())}) # 앞에서 1 2 이 선언되었지만 j 랑 i를 반전해서 높은 수로 덮어씌움
 # j 0, i word # 3? 왜 my cat 은 5하고 6인가? 답은4번
 #{'my': 5, 'cat': 6, 'has': 2, 'blue': 3, 'eyes,': 4, 'is': 7, 'cute': 8}
 
 #3
 colors = ['orange', 'pink', 'brown', 'black', 'white']
-result = '&'.join(colors) # 배열을 연결시켜준다는 의미?
+result = '&'.join(colors) # 배열을 연결 시켜 준다는 의미
 print(result)
 #orange&pink&brown&black&white
 
@@ -176,22 +165,22 @@ print ("score:",midterm_score[2][1])
 #72
 
 #12
-# alist = ["a", "b", "c"]
-# blist = ["1", "2", "3"]
-# abcd= []
-# for a, b in enumerate(zip(alist, blist)): # a 1
-#     try:
-#         abcd.append(b[a])
-#     except IndexError:
-#         abcd.append("error")
-#
-# print(abcd)
+alist = ["a", "b", "c"]
+blist = ["1", "2", "3"]
+abcd= []
+for a, b in enumerate(zip(alist, blist)): # 0 : a ,1 1 : b , 2   3 : c ,3
+    try:
+        abcd.append(b[a])
+    except IndexError:
+        abcd.append("error")
+
+print(abcd)
 #13
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h"]
 nums = [i for i in range(20)]
 answer = [alpha+str(num) for alpha in alphabet for num in nums if num%2==0]
 print(len(answer))
-#4?
+#80?
 # -------------------------------------------------
 # 프로젝트할 때 팀구호
 #우리의결의= """취하고싶으면달려라
