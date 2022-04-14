@@ -7,6 +7,8 @@
     if a>b:
         print(a)
             print(b)  => 에러발생
+        print(b)  =>  if 안에 있는 문장
+    print(b)  => if 밖에 있는 문장
 
     (1) if 문
         if 조건식A :
@@ -34,8 +36,52 @@ i8=dict()
 i9={}
 i10=None
 
+a = -1 # -1을 가리키는 객체 a를 만들라!
+
+if a:
+    print("True1") #True
+else:
+    print("False1")
+
+if not a:
+    print("True2")
+else:
+    print("False2") # False
 
 
+a = 10;
+b = -1;
+
+if a and b:
+    print("True3") #
+else:
+    print("False3")
+if a or b:
+    print("True4") #
+else:
+    print("False4")
+
+print(a and b) # True -1 결론이 나고자 하는 값으로 결과를 리턴해 해줌  그래서 -1  and는 두 개의 값이 True  그래서 and 의 뒤에 있는 b를 확인하고서 값을 출력함  만약에 a가 false라면 바로 a를 출력함
+print(a or b) # True 10
+
+#-----------------------------------------------
+a=0
+if a:
+    print('A')
+print('B')
+print('C')
+
+#-----------------------------------------------
+a=10
+b=-1
+
+if a:
+    c=2
+elif b:
+    c=4
+else:
+    c=6
+print(c)#2
 
 
 
