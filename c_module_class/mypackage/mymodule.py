@@ -18,10 +18,17 @@
 """
 from random import choice
 
+
 def get_weather():
-    today = ['맑음','비','눈','폭우','돌풍','따뜻']
+    today = ['맑음', '비', '눈', '폭우', '돌풍', '따뜻']
     return choice(today)
 
+
 def get_date():
-    today = ['월','화','수','목','금','토','일ㄴ']
+    today = ['월', '화', '수', '목', '금', '토', '일']
     return choice(today)
+
+
+if __name__ == '__main__': # 메인 함수가 없어서 이걸 대신에서 사용하는데
+                            # 용도는 메인이 아닌 밖에서 호출하면 안부르겠다!
+    print(get_date(), get_weather())
